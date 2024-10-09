@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitrine de Produtos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        @media (max-width: 600px) {
+            table, thead, tbody, th, td, tr {
+                display: block;
+            }
+            th {
+                display: none;
+            }
+            tr {
+                margin-bottom: 10px;
+            }
+            td {
+                text-align: right;
+                position: relative;
+                padding-left: 50%;
+            }
+            td::before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                padding-left: 10px;
+                text-align: left;
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Vitrine de Produtos</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Preço</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td data-label="Nome">Camiseta Básica</td>
+                <td data-label="Descrição">Camiseta de algodão, confortável e respirável. Disponível em várias cores.</td>
+                <td data-label="Preço">R$ 49,90</td>
+            </tr>
+            <tr>
+                <td data-label="Nome">Calça Jeans</td>
+                <td data-label="Descrição">Calça jeans de corte reto, versátil para diversas ocasiões.</td>
+                <td data-label="Preço">R$ 99,90</td>
+            </tr>
+            <tr>
+                <td data-label="Nome">Tênis Esportivo</td>
+                <td data-label="Descrição">Tênis leve e durável, ideal para atividades físicas.</td>
+                <td data-label="Preço">R$ 159,90</td>
+            </tr>
+            <tr>
+                <td data-label="Nome">Mochila Escolar</td>
+                <td data-label="Descrição">Mochila espaçosa com diversos compartimentos, perfeita para o dia a dia.</td>
+                <td data-label="Preço">R$ 89,90</td>
+            </tr>
+            <tr>
+                <td data-label="Nome">Relógio Digital</td>
+                <td data-label="Descrição">Relógio com funcionalidade de cronômetro e alarme, à prova d'água.</td>
+                <td data-label="Preço">R$ 119,90</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
